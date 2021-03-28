@@ -11,6 +11,13 @@ function write_data_to_csv(){
 
     #print_r 変数の中身を出力する。var_dumpも
     return print_r($restaurants);
+
+    if (isset($response["results"]["show"])){
+        foreach($response["shop"] as &$i){
+            $restaurant_name = $i["name"];
+            $restaurants[] = $restaurant_name;
+        }
+    }
 }
 
 write_data_to_csv();
