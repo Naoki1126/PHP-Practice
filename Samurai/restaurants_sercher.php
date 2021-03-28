@@ -1,4 +1,7 @@
 <?php
+require 'vendor/autoload.php';
+
+use GuzzleHttp/Client;
 
 function write_data_to_csv(){
 
