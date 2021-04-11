@@ -21,8 +21,12 @@ function tag($tag, $txt){
 }
 class HelloController extends Controller
 {
-    public function index(){
-        $data = ["msg"=>'This is message received from the controller '];
+    public function index($id="zero"){
+        $data =
+        [
+        "msg"=>'This is message received from the controller ',
+        "id"=>$id
+        ];
        return view('hello.index', $data);
     }
 
