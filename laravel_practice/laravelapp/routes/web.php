@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 // Route::get('hello', [HelloController::class,'index']);
-Route::get('hello/{id?}', [HelloController::class, 'index']);
+Route::get('hello', [HelloController::class, 'index']);
 Route::get('hello/other', [HelloController::class, 'other']);
 // Route::get('hello', 'HelloController@index');
 Route::get('single', SingleController::class);
