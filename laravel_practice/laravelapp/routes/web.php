@@ -19,7 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('hello', [HelloController::class,'index']);
+// Route::get('hello', [HelloController::class,'index']);
+Route::get('hello', [HelloController::class, 'index']);
 Route::get('hello/other', [HelloController::class, 'other']);
 // Route::get('hello', 'HelloController@index');
 Route::get('single', SingleController::class);

@@ -22,15 +22,8 @@ function tag($tag, $txt){
 class HelloController extends Controller
 {
     public function index(){
-        global $head, $style, $body, $end;
-
-        $html = $head . tag('title',"Hello/Index"). $style .
-            $body
-            . tag("h1","Index") . tag("p",'this is Index Page')
-            . '<a href="/hello/other">go to Other page</a>'
-            . $end;
-        return $html;
-
+        $data = ["msg"=>'This is message received from the controller '];
+       return view('hello.index', $data);
     }
 
     public function other(){
