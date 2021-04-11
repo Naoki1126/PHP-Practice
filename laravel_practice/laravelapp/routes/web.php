@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
 use App\Http\Controllers\SingleController;
+use App\Http\Controllers\RequestAndResponseController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +23,4 @@ Route::get('hello', [HelloController::class,'index']);
 Route::get('hello/other', [HelloController::class, 'other']);
 // Route::get('hello', 'HelloController@index');
 Route::get('single', SingleController::class);
+Route::get('requestandresponse', [RequestAndResponseController::class, "index"]);
